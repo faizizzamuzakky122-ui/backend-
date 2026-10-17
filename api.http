@@ -1,0 +1,51 @@
+### Variabel Dasar
+@baseUrl = http://localhost:8080
+
+### 1. Ambil Semua Foto Galeri (GET /api/v1/gallery)
+GET {{baseUrl}}/api/v1/gallery HTTP/1.1
+Accept: application/json
+
+###
+
+### 2. Ambil Foto Galeri dengan Filter Kategori dan Paginasi
+GET {{baseUrl}}/api/v1/gallery?category=remaja&page=1&limit=6 HTTP/1.1
+Accept: application/json
+
+###
+
+### 3. Unggah Foto Kegiatan Baru (POST /api/v1/gallery/upload)
+POST {{baseUrl}}/api/v1/gallery/upload HTTP/1.1
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="title"
+
+Kerja Bakti Saluran Irigasi Sawah
+--WebAppBoundary
+Content-Disposition: form-data; name="caption"
+
+Warga bergotong royong membersihkan saluran irigasi bersama pemuda.
+--WebAppBoundary
+Content-Disposition: form-data; name="category"
+
+gotong_royong
+--WebAppBoundary
+Content-Disposition: form-data; name="uploader_name"
+
+Pak Hartono
+--WebAppBoundary
+Content-Disposition: form-data; name="activity_date"
+
+2026-10-15
+--WebAppBoundary
+Content-Disposition: form-data; name="image"; filename="dummy.png"
+Content-Type: image/png
+
+< ./database/seed.sql
+--WebAppBoundary--
+
+###
+
+### 4. Ambil Detail Foto Galeri Berdasarkan ID (GET /api/v1/gallery/:id)
+GET {{baseUrl}}/api/v1/gallery/e4b2d308-4171-4b1f-827c-3b91a0fc1290 HTTP/1.1
+Accept: application/json

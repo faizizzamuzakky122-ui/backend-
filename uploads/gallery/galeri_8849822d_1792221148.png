@@ -1,0 +1,92 @@
+-- Seed data untuk tabel gallery berdasarkan schema.sql
+INSERT OR IGNORE INTO gallery (
+    id,
+    title,
+    caption,
+    category,
+    uploader_name,
+    image_url,
+    thumbnail_url,
+    file_size,
+    mime_type,
+    activity_date,
+    status
+) VALUES 
+(
+    'e4b2d308-4171-4b1f-827c-3b91a0fc1290',
+    'Kerja Bakti Saluran Irigasi Sawah',
+    'Warga bergotong royong membersihkan saluran irigasi bersama pemuda.',
+    'gotong_royong',
+    'Pak Hartono',
+    '/uploads/gallery/kerja-bakti-irigasi.webp',
+    '/uploads/gallery/thumb_kerja-bakti-irigasi.webp',
+    204800,
+    'image/webp',
+    '2026-10-15',
+    'published'
+),
+(
+    '7ac199ef-8bf6-4dae-bc60-98d0cba1e784',
+    'Latihan Futsal Pemuda Desa',
+    'Kegiatan olahraga futsal mingguan pemuda desa di lapangan serbaguna.',
+    'remaja',
+    'Siti Rahmawati',
+    '/uploads/gallery/latihan-futsal.webp',
+    '/uploads/gallery/thumb_latihan-futsal.webp',
+    312000,
+    'image/webp',
+    '2026-10-17',
+    'published'
+),
+(
+    'c1a2d3e4-5678-49ab-9cde-f12345678901',
+    'Diskusi Pemuda Karang Taruna',
+    'Musyawarah pemuda pemudi untuk mempersiapkan program kerja desa.',
+    'remaja',
+    'Budi Santoso',
+    '/uploads/gallery/diskusi-pemuda.webp',
+    '/uploads/gallery/thumb_diskusi-pemuda.webp',
+    185000,
+    'image/webp',
+    '2026-10-10',
+    'published'
+),
+(
+    'd2b3c4d5-6789-40bc-adef-012345678902',
+    'Peringatan HUT RI dan Perlombaan Desa',
+    'Kemeriahan aneka perlombaan menyambut hari kemerdekaan bersama warga.',
+    'seni_budaya',
+    'Agus Setiawan',
+    '/uploads/gallery/acara-17-agustus.webp',
+    '/uploads/gallery/thumb_acara-17-agustus.webp',
+    450000,
+    'image/webp',
+    '2026-08-17',
+    'published'
+),
+(
+    'f3c4d5e6-789a-41cd-beef-123456789003',
+    'Panorama Panen Raya Sawah Desa',
+    'Pemandangan hamparan sawah warga saat musim panen padi melimpah.',
+    'umum',
+    'Dewi Lestari',
+    '/uploads/gallery/panen-raya.webp',
+    '/uploads/gallery/thumb_panen-raya.webp',
+    380000,
+    'image/webp',
+    '2026-09-05',
+    'published'
+),
+(
+    'a4d5e6f7-89ab-42de-c0ef-234567890004',
+    'Kerja Bakti Pembangunan Jalan Desa',
+    'Gotong royong pengaspalan dan perbaikan jalan lingkar desa.',
+    'gotong_royong',
+    'Pak Joko',
+    '/uploads/gallery/pembangunan-jalan.webp',
+    '/uploads/gallery/thumb_pembangunan-jalan.webp',
+    290000,
+    'image/webp',
+    '2026-09-20',
+    'published'
+);
